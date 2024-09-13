@@ -20,7 +20,7 @@ void draw(){
      LightOn++;
   }
   
-  //prevents runoff
+  //when over threshold resets back to 0
   if (LightOn > 3) {LightOn = 0;}
   
   //sets them all to turned off
