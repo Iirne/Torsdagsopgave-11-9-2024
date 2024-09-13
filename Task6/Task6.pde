@@ -15,13 +15,13 @@ void setup(){
 }
 
 void draw(){
-  // every second it will count up once
+  // every 30 frames it will count LightOn up once
   if (frameCount % 30 == 0){
      LightOn++;
   }
   
   //prevents runoff
-  if (LightOn > 2) {LightOn = 0;}
+  if (LightOn > 3) {LightOn = 0;}
   
   //sets them all to turned off
     fill(RedOff);
