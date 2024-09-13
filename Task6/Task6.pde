@@ -5,7 +5,7 @@ color RedOff = color(100,0,0);
 color YellowOff = color(99,99,0);
 color GreenOff = color(0,100,0);
 
-int LightOn = 2; //0 = GREEN, 1 = YELLOW, 2 = RED, 3 = YELLOW
+int LightOn = 2; //0 = RED, 1 = YELLOW, 2 = GREEN, 3 = YELLOW
 
 void setup(){
   size(400,400);
@@ -21,7 +21,7 @@ void draw(){
   }
   
   //prevents runoff
-  if (LightOn > 3) {LightOn = 0;}
+  if (LightOn > 2) {LightOn = 0;}
   
   //sets them all to turned off
     fill(RedOff);
@@ -36,17 +36,18 @@ void draw(){
   //turns on the right one
   switch(LightOn){
     case 0:
-        fill(Green);
-        circle(width/2,height/6*5,height/3-10);
+        fill(Red);
+        circle(width/2,height/6,height/3-10);
+        
     break;
     case 1:
     case 3:
-    fill(Yellow);
-    circle(width/2,height/6*3,height/3-10);
+        fill(Yellow);
+        circle(width/2,height/6*3,height/3-10);
     break;
     case 2:
-    fill(Red);
-    circle(width/2,height/6,height/3-10);
+        fill(Green);
+        circle(width/2,height/6*5,height/3-10);
     break;
 
   }

@@ -25,17 +25,13 @@ else{
 
 
 //3.c
-int X = 8;
-int Y = 8;
-int Z = 14;
-
-if (X + Y + Z == 30){
-    if (X % 10 == 0 || Y % 10 == 0 || Z % 10 == 0){
-        println("XYZ FAILURE");
-    }
-    else{
-        println("XYZ SUCCESS");
-    }
+int X = 0;
+int Y = -10;
+int Z = 40;
+//fejl gør at alle tal der ganges med 10 giver fejl. 
+//dette giver kun problemer når negative tal er indvoldveret (eks. 0, -10, 40 giver fejl)
+if (X + Y + Z == 30 && (X % 10 != 0 || Y % 10 != 0 || Z % 10 != 0)){
+    println("XYZ SUCCESS");
 }
 else{
     println("XYZ FAILURE");
