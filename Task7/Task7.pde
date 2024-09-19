@@ -1,6 +1,6 @@
-int Input =-12;
+int Input =  6;
 //i gets closer to input per iteration
-for (int i = 0; i != Input; i += (int)Math.signum(Input)){ //<>//
+for (int i = 0; i != Input + (int)Math.signum(Input) ; i += (int)Math.signum(Input)){ //<>//
   println(i);
   if (i == 6)
     println("six");
